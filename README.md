@@ -34,8 +34,3 @@
 Советую сами файлы подготовить заранее в другой директории, так как все файлы в `backend/main/scripts_for_parsing/` и `backend/main/scripts_for_parsing/contests` при появлении там в течение минуты попадают в систему.
 
 В конце остаётся проверить работает ли это всё, пишем в терминал команду `docker-compose logs backend` и ищем надпись `{error_name} at {script_name}, {parsing type} parse.`.
-
-Скрипты которые надо переносить находятся в [GitLab репозитории](https://gitlab.deeplace.md/winetaste/medal-data-parse/-/tree/issue19751_ValentinCunev).
-Там есть скрипты, которые обрабатывают некий файл `файл.txt`, их не трогаем, они обрабатывают файлы формата `pdf`.
-Все скрипты при запуске полностью спарсят сайт и сохранят файл в `Excel` формате. Это чем-то напоминает `total parse`.
-Метод `check_new_results` надо писать полностью самостоятельно, а методы `surface_parse`, `deep_parse` зачастую исходят из `total_parse` с некими изменениями.
